@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     let menuList = ["烤鸡翅","油爆大虾","什锦炒蔬菜","香辣翅尖","青椒酿肉","汆烫","白菜肉丸","牛奶咖喱","铁板豆腐","椒盐小土豆","番茄牛腩","蒜蓉粉丝","泡菜五花肉","肉末茄子"]
     // menu index
     var menuIndex = 0
+    var count = 0
     
     //UI components
     @IBOutlet weak var mealLable: UILabel!
@@ -20,11 +21,11 @@ class ViewController: UIViewController {
     //***actions***
     //click what to eat button
     @IBAction func changeMealButton(_ sender: Any) {
-        changeMeanul()
+        showWang()
     }
     //shake phone
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
-        changeMeanul()
+        showWang()
     }
      
     override func viewDidLoad() {
@@ -35,8 +36,18 @@ class ViewController: UIViewController {
     //***functions***
     //the func to change menu
     func changeMeanul(){
-        menuIndex = Int.random(in: 0...14)
+        menuIndex = Int.random(in: 0...13)
         mealLable.text = menuList[menuIndex]
+    }
+    func showWang() {
+        count += 1
+        if(count == 3){
+            print(count)
+            mealLable.text = "红烧密子君"
+            return
+        }
+        changeMeanul()
+        
     }
 
 }
