@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     // menu
-    let menuList = ["烤鸡翅","油爆大虾","什锦炒蔬菜","香辣翅尖","青椒酿肉","汆烫","白菜肉丸","牛奶咖喱","铁板豆腐","椒盐小土豆","番茄牛腩","蒜蓉粉丝","泡菜五花肉","肉末茄子"]
+    let menuList = ["烤鸡翅","油爆大虾","什锦炒蔬菜","香辣翅尖","青椒酿肉","汆烫","白菜肉丸","牛奶咖喱","铁板豆腐","椒盐小土豆","番茄牛腩","蒜蓉粉丝","泡菜五花肉","肉末茄子","清炒藕丁","炒三丁","干锅包菜","鱼香肉丝","肉末蒸蛋"]
     // menu index
     var menuIndex = 0
     var count = 0
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     //***functions***
     //the func to change menu
     func changeMeanul(){
-        menuIndex = Int.random(in: 0...13)
+        menuIndex = Int.random(in: 0...18)
         mealLable.text = menuList[menuIndex]
     }
     func showWang() {
